@@ -33,73 +33,36 @@ defmodule Highlighter do
   def filter_regex(line, out_fd) do
     if String.length(line) > 0 do
       cond do
-        match = Regex.run(~r/#.*$/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "comment")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
+        match = Regex.run(~r/^#.*$/, line) -> execute(match, "comment", line, out_fd)
 
-        match = Regex.run(~r/^(""".*""")|('''.*''')/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "multiline_comment")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
+        match = Regex.run(~r/^(""".*""")|('''.*''')/, line) -> execute(match, "multiline_comment", line, out_fd)
 
-        match = Regex.run(~r/^\s+/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "space")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
+        match = Regex.run(~r/^\s+/, line) -> execute(match, "space", line, out_fd)
 
-        match = Regex.run(~r/^\b(?:if|else|while|elif|for|def|return|is|not)\b/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "reserved_word")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
+        match = Regex.run(~r/^\b(?:if|else|while|elif|for|def|return|is|not)\b/, line) -> execute(match, "reserved_word", line, out_fd)
 
-        match = Regex.run(~r/^\w+(?=\()/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "function_name")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
+        match = Regex.run(~r/^\w+(?=\()/, line) -> execute(match, "function_name", line, out_fd)
 
-        match = Regex.run(~r/^[0-9]+(\.[0-9]+)?/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "number")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
+        match = Regex.run(~r/^[0-9]+(\.[0-9]+)?/, line) -> execute(match, "number", line, out_fd)
 
-        match = Regex.run(~r/^\b\w+\b/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "variable")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
+        match = Regex.run(~r/^\b\w+\b/, line) -> execute(match, "variable", line, out_fd)
 
+        match = Regex.run(~r/^[\+\-\*\/=<>!]+/, line) -> execute(match, "operator", line, out_fd)
 
+        match = Regex.run(~r/^[{}[\]();,]/, line) -> execute(match, "symbol", line, out_fd)
 
-        match = Regex.run(~r/^[\+\-\*\/=<>!]+/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "operator")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
+        match = Regex.run(~r/(['"])(?:(?=(\\?))\2.)*?\1/, line) -> execute(match, "string", line, out_fd)
 
-        match = Regex.run(~r/^[{}[\]();,]/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "symbol")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
-
-        match = Regex.run(~r/(['"])(?:(?=(\\?))\2.)*?\1/, line) ->
-          length = String.length(hd(match))
-          write_out(out_fd, hd(match), "string")
-          {_first_part, second_part} = String.split_at(line, length)
-          filter_regex(second_part, out_fd)
-
-
-        true ->
-          write_out(out_fd, line, "default")
+        true -> write_out(out_fd, line, "default")
       end
     end
+  end
+
+  def execute(match, type, line, out_fd) do
+    length = String.length(hd(match))
+    write_out(out_fd, hd(match), type)
+    {_first_part, second_part} = String.split_at(line, length)
+    filter_regex(second_part, out_fd)
   end
 
   defp write_out(out_fd, match, type) do
