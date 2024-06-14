@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>File Content</title>
+<link rel="stylesheet" href="out_fd.css"></head>
+<body>
+<pre>
+<span class="comment"># file_io.py</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">write_to_file</span><span class="symbol">(</span><span class="variable">filename</span><span class="symbol">,</span><span class="space"> </span><span class="variable">content</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">with</span><span class="space"> </span><span class="function_name">open</span><span class="symbol">(</span><span class="variable">filename</span><span class="symbol">,</span><span class="space"> </span><span class="string">'w'</span><span class="symbol">)</span><span class="space"> </span><span class="variable">as</span><span class="space"> </span><span class="variable">file</span><span class="default">:
+</span><span class="space">        </span><span class="variable">file</span><span class="default">.write(content)
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">read_from_file</span><span class="symbol">(</span><span class="variable">filename</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">with</span><span class="space"> </span><span class="function_name">open</span><span class="symbol">(</span><span class="variable">filename</span><span class="symbol">,</span><span class="space"> </span><span class="string">'r'</span><span class="symbol">)</span><span class="space"> </span><span class="variable">as</span><span class="space"> </span><span class="variable">file</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="variable">file</span><span class="default">.read()
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">filename</span><span class="space"> </span><span class="operator">=</span><span class="space"> </span><span class="string">"example.txt"</span><span class="space">
+</span><span class="space">    </span><span class="variable">content</span><span class="space"> </span><span class="operator">=</span><span class="space"> </span><span class="string">"Hello, this is a test file.\nThis file is used to demonstrate file I/O in Python."</span><span class="space">
+</span><span class="space">    </span><span class="function_name">write_to_file</span><span class="symbol">(</span><span class="variable">filename</span><span class="symbol">,</span><span class="space"> </span><span class="variable">content</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">read_content</span><span class="space"> </span><span class="operator">=</span><span class="space"> </span><span class="function_name">read_from_file</span><span class="symbol">(</span><span class="variable">filename</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="variable">f</span><span class="string">"Content of {filename}:"</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="variable">read_content</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">if</span><span class="space"> </span><span class="variable">__name__</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">"__main__"</span><span class="default">:
+</span><span class="space">    </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="space">
+</span></pre>
+</body>
+</html>

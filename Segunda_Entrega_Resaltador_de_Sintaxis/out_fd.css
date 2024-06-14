@@ -1,0 +1,43 @@
+/* styles.css */
+/* Francisco Urquizo Schnaas */
+
+body {
+    background-color: black; /* Black background for high contrast */
+}
+
+.comment {
+    color: #ff0000
+}
+
+.multiline_comment {
+    color: pink
+}
+
+.number {
+    color: darkorchid
+}
+
+.reserved_word {
+    color: #FF6F61; /* Bright coral */
+}
+
+.string {
+    color: #FFD700
+}
+
+.function_name {
+    color: #00FF00; /* Bright green */
+}
+
+.variable {
+    color: #00BFFF; /* Bright blue */
+}
+
+.operator {
+    color: #D3D3D3; /* Light gray */
+}
+
+.symbol {
+    color: #FFA500; /* Bright orange */
+}
+

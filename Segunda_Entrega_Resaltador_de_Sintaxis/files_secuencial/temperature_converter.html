@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>File Content</title>
+<link rel="stylesheet" href="out_fd.css"></head>
+<body>
+<pre>
+<span class="comment"># temperature_converter.py</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">celsius_to_fahrenheit</span><span class="symbol">(</span><span class="variable">c</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="reserved_word">return</span><span class="space"> </span><span class="symbol">(</span><span class="variable">c</span><span class="space"> </span><span class="operator">*</span><span class="space"> </span><span class="number">9</span><span class="operator">/</span><span class="number">5</span><span class="symbol">)</span><span class="space"> </span><span class="operator">+</span><span class="space"> </span><span class="number">32</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">fahrenheit_to_celsius</span><span class="symbol">(</span><span class="variable">f</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="reserved_word">return</span><span class="space"> </span><span class="symbol">(</span><span class="variable">f</span><span class="space"> </span><span class="operator">-</span><span class="space"> </span><span class="number">32</span><span class="symbol">)</span><span class="space"> </span><span class="operator">*</span><span class="space"> </span><span class="number">5</span><span class="operator">/</span><span class="number">9</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">temps_celsius</span><span class="space"> </span><span class="operator">=</span><span class="space"> </span><span class="symbol">[</span><span class="number">0</span><span class="symbol">,</span><span class="space"> </span><span class="number">20</span><span class="symbol">,</span><span class="space"> </span><span class="number">37</span><span class="symbol">,</span><span class="space"> </span><span class="number">100</span><span class="symbol">]</span><span class="space">
+</span><span class="space">    </span><span class="variable">temps_fahrenheit</span><span class="space"> </span><span class="operator">=</span><span class="space"> </span><span class="symbol">[</span><span class="number">32</span><span class="symbol">,</span><span class="space"> </span><span class="number">68</span><span class="symbol">,</span><span class="space"> </span><span class="number">98.6</span><span class="symbol">,</span><span class="space"> </span><span class="number">212</span><span class="symbol">]</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="string">"Celsius to Fahrenheit:"</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">for</span><span class="space"> </span><span class="variable">temp</span><span class="space"> </span><span class="variable">in</span><span class="space"> </span><span class="variable">temps_celsius</span><span class="default">:
+</span><span class="space">        </span><span class="function_name">print</span><span class="symbol">(</span><span class="variable">f</span><span class="string">"{temp}°C = {celsius_to_fahrenheit(temp):.2f}°F"</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="string">"Fahrenheit to Celsius:"</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">for</span><span class="space"> </span><span class="variable">temp</span><span class="space"> </span><span class="variable">in</span><span class="space"> </span><span class="variable">temps_fahrenheit</span><span class="default">:
+</span><span class="space">        </span><span class="function_name">print</span><span class="symbol">(</span><span class="variable">f</span><span class="string">"{temp}°F = {fahrenheit_to_celsius(temp):.2f}°C"</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">if</span><span class="space"> </span><span class="variable">__name__</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">"__main__"</span><span class="default">:
+</span><span class="space">    </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="space">
+</span></pre>
+</body>
+</html>

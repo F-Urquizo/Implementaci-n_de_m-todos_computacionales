@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>File Content</title>
+<link rel="stylesheet" href="out_fd.css"></head>
+<body>
+<pre>
+<span class="comment"># grade_calculator.py</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">calculate_grade</span><span class="symbol">(</span><span class="variable">scores</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">average</span><span class="space"> </span><span class="operator">=</span><span class="space"> </span><span class="function_name">sum</span><span class="symbol">(</span><span class="variable">scores</span><span class="symbol">)</span><span class="space"> </span><span class="operator">/</span><span class="space"> </span><span class="function_name">len</span><span class="symbol">(</span><span class="variable">scores</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">if</span><span class="space"> </span><span class="variable">average</span><span class="space"> </span><span class="operator">>=</span><span class="space"> </span><span class="number">90</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="string">'A'</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">elif</span><span class="space"> </span><span class="variable">average</span><span class="space"> </span><span class="operator">>=</span><span class="space"> </span><span class="number">80</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="string">'B'</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">elif</span><span class="space"> </span><span class="variable">average</span><span class="space"> </span><span class="operator">>=</span><span class="space"> </span><span class="number">70</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="string">'C'</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">elif</span><span class="space"> </span><span class="variable">average</span><span class="space"> </span><span class="operator">>=</span><span class="space"> </span><span class="number">60</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="string">'D'</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">else</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="string">'F'</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">scores</span><span class="space"> </span><span class="operator">=</span><span class="space"> </span><span class="symbol">[</span><span class="number">88</span><span class="symbol">,</span><span class="space"> </span><span class="number">92</span><span class="symbol">,</span><span class="space"> </span><span class="number">79</span><span class="symbol">,</span><span class="space"> </span><span class="number">93</span><span class="symbol">,</span><span class="space"> </span><span class="number">85</span><span class="symbol">]</span><span class="space">
+</span><span class="space">    </span><span class="variable">grade</span><span class="space"> </span><span class="operator">=</span><span class="space"> </span><span class="function_name">calculate_grade</span><span class="symbol">(</span><span class="variable">scores</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="variable">f</span><span class="string">"Scores: {scores}"</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="variable">f</span><span class="string">"Grade: {grade}"</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">if</span><span class="space"> </span><span class="variable">__name__</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">"__main__"</span><span class="default">:
+</span><span class="space">    </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="space">
+</span></pre>
+</body>
+</html>
