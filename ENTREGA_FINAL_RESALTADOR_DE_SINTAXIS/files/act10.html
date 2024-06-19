@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>File Content</title>
+<link rel="stylesheet" href="out_fd.css"></head>
+<body>
+<pre>
+<span class="comment"># Francisco Urquizo</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">equivalente</span><span class="symbol">(</span><span class="variable">horas</span><span class="symbol">,</span><span class="variable">minutos</span><span class="symbol">,</span><span class="variable">segundos</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">x</span><span class="operator">=</span><span class="symbol">(</span><span class="variable">horas</span><span class="operator">*</span><span class="number">3600</span><span class="symbol">)</span><span class="operator">+</span><span class="symbol">(</span><span class="variable">minutos</span><span class="operator">*</span><span class="number">60</span><span class="symbol">)</span><span class="operator">+</span><span class="variable">segundos</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">return</span><span class="space"> </span><span class="variable">x</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">h1</span><span class="operator">=</span><span class="function_name">int</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar la cantidad de horas del primer proceso: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">m1</span><span class="operator">=</span><span class="function_name">int</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar la cantidad de minutos del primer proceso: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">s1</span><span class="operator">=</span><span class="function_name">int</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar la cantidad de segundos del primer proceso: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">y</span><span class="operator">=</span><span class="function_name">equivalente</span><span class="symbol">(</span><span class="variable">h1</span><span class="symbol">,</span><span class="variable">m1</span><span class="symbol">,</span><span class="variable">s1</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="variable">y</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">h2</span><span class="operator">=</span><span class="function_name">int</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar la cantidad de horas del segundo proceso: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">m2</span><span class="operator">=</span><span class="function_name">int</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar la cantidad de horas del segundo proceso: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">s2</span><span class="operator">=</span><span class="function_name">int</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar la cantidad de horas del segundo proceso: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">z</span><span class="operator">=</span><span class="function_name">equivalente</span><span class="symbol">(</span><span class="variable">h2</span><span class="symbol">,</span><span class="variable">m2</span><span class="symbol">,</span><span class="variable">s2</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="variable">z</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">areaRect</span><span class="symbol">(</span><span class="variable">largo</span><span class="symbol">,</span><span class="variable">ancho</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="reserved_word">return</span><span class="symbol">(</span><span class="variable">largo</span><span class="operator">*</span><span class="variable">ancho</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">perimetroRect</span><span class="symbol">(</span><span class="variable">largo</span><span class="symbol">,</span><span class="variable">ancho</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="reserved_word">return</span><span class="symbol">(</span><span class="symbol">(</span><span class="number">2</span><span class="operator">*</span><span class="variable">largo</span><span class="symbol">)</span><span class="operator">+</span><span class="symbol">(</span><span class="number">2</span><span class="operator">*</span><span class="variable">ancho</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">largo</span><span class="operator">=</span><span class="function_name">float</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar largo del rectángulo [mayor a cero]: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">ancho</span><span class="operator">=</span><span class="function_name">float</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar el ancho del rectángulo [mayor a cero]: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">Decision</span><span class="operator">=</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Elegir entre a y p: "</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    
+</span><span class="space">    </span><span class="reserved_word">if</span><span class="space"> </span><span class="variable">Decision</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">'a'</span><span class="default">:
+</span><span class="space">        </span><span class="function_name">print</span><span class="symbol">(</span><span class="function_name">areaRect</span><span class="symbol">(</span><span class="variable">largo</span><span class="symbol">,</span><span class="variable">ancho</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">elif</span><span class="space"> </span><span class="variable">Decision</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">'p'</span><span class="default">:
+</span><span class="space">        </span><span class="function_name">print</span><span class="symbol">(</span><span class="function_name">perimetroRect</span><span class="symbol">(</span><span class="variable">largo</span><span class="symbol">,</span><span class="variable">ancho</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="variable">calculadora</span><span class="space"> </span><span class="symbol">(</span><span class="variable">uno</span><span class="symbol">,</span><span class="variable">dos</span><span class="symbol">,</span><span class="variable">clave</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="reserved_word">if</span><span class="space"> </span><span class="variable">clave</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">'s'</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="symbol">(</span><span class="variable">uno</span><span class="operator">+</span><span class="variable">dos</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">elif</span><span class="space"> </span><span class="variable">clave</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">'r'</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="symbol">(</span><span class="variable">uno</span><span class="operator">-</span><span class="variable">dos</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">elif</span><span class="space"> </span><span class="variable">clave</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">'m'</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="symbol">(</span><span class="variable">uno</span><span class="operator">*</span><span class="variable">dos</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="reserved_word">elif</span><span class="space"> </span><span class="variable">clave</span><span class="space"> </span><span class="operator">==</span><span class="space"> </span><span class="string">'d'</span><span class="default">:
+</span><span class="space">        </span><span class="reserved_word">return</span><span class="space"> </span><span class="symbol">(</span><span class="variable">uno</span><span class="operator">/</span><span class="variable">dos</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    
+</span><span class="reserved_word">def</span><span class="space"> </span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="default">:
+</span><span class="space">    </span><span class="variable">uno</span><span class="operator">=</span><span class="function_name">int</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar numero uno: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">dos</span><span class="operator">=</span><span class="function_name">int</span><span class="symbol">(</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Dar numero dos: "</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="variable">clave</span><span class="operator">=</span><span class="function_name">input</span><span class="symbol">(</span><span class="string">"Elegir entre s, r, m y d: "</span><span class="symbol">)</span><span class="space">
+</span><span class="space">    </span><span class="function_name">print</span><span class="symbol">(</span><span class="function_name">calculadora</span><span class="symbol">(</span><span class="variable">uno</span><span class="symbol">,</span><span class="space"> </span><span class="variable">dos</span><span class="symbol">,</span><span class="space"> </span><span class="variable">clave</span><span class="symbol">)</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="space">
+</span><span class="space">
+</span><span class="space">    
+</span><span class="space">    
+</span><span class="space">
+</span><span class="space">    
+</span><span class="space">
+</span><span class="function_name">main</span><span class="symbol">(</span><span class="symbol">)</span><span class="space">
+</span><span class="space">              
+</span><span class="space">
+</span><span class="space">    
+</span><span class="space">    
+</span><span class="space">    
+</span><span class="space">    
+</span><span class="space">    
+</span><span class="space">    </span></pre>
+</body>
+</html>
